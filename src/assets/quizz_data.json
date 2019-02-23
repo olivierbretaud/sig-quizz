@@ -37,9 +37,9 @@
       "id":"5",
       "next": "#6",
       "question" : "Existe-t-il une obligation de faire contrôler le respect de l’égalité salariale au sein des entreprises ? Et des sanctions ?",
-      "responsesArray": ["1945", "1965", "1985","2005"],
-      "response": "2005",
-      "description" : ""
+      "responsesArray": ["oui", "non"],
+      "response": "non",
+      "description" : "Non. Il incombe aux entreprises de se mettre « spontanément » en conformité. L’Etat met à disposition gratuitement un outil d’analyse de l’égalité mais aucun employeur n’est obligé de s’y référer. Si l’analyse révèle des inégalités salariales, aucune sanction n’est prévue. Seules les entreprises qui soumissionnent pour les marchés publics peuvent être contrôlées et écartées si l’analyse démontre une discrimination salariale."
     },
     {
       "id":"6",
