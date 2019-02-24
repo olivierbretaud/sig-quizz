@@ -2,9 +2,9 @@
 	<div id="app">
 	<Start/>
 	<div v-for="data in quizz" v-bind:key="data.id">
-		<Question v-bind:id="data.id" v-bind:questionData="data"/>
+		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()"/>
 	</div>
-	<End id="end"/>
+	<End id="end" v-bind:totalCount="userResponse"/>
 	</div>
 </template>
 
@@ -25,9 +25,18 @@ export default {
 
 	data() {
 		return {
-			quizz: data.quizz
+			quizz: data.quizz,
+			userResponse: 0
 		};
 	},
+
+	methods: {
+		counter() {
+			this.userResponse = this.userResponse + 10
+			return this.userResponse
+		}
+	}
+
 }
 
 $(document).ready(function() {
@@ -47,7 +56,7 @@ return false;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #3d4146;
 }
 .lora {
   font-family: 'Lora', serif;
