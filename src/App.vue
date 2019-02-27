@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" class="bg-img">
 	<Start/>
 	<div v-for="data in quizz" v-bind:key="data.id">
 		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()"/>
@@ -39,37 +39,38 @@ export default {
 
 }
 
-$(document).ready(function() {
-$('.js-scrollTo').on('click', function() { // Au clic sur un élément
-let page = $(this).attr('href'); // Page cible
-let speed = 750; // Durée de l'animation (en ms)
-$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-return false;
-  }); 
-});
-
 </script>
 
 <style>
 #app {
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #3d4146;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #3d4146;
+	overflow-x: hidden;
 }
+
+.bg-img {
+	background-image: url("./assets/bg-picture-grey.png");
+	background-position: center; /* Center the image */
+	background-attachment: fixed;
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+}
+
 .lora {
-  font-family: 'Lora', serif;
+	font-family: 'Lora', serif;
 }
 
 .lora-bold {
-  font-family: 'Lora', serif;
-  font-weight: 700
+	font-family: 'Lora', serif;
+	font-weight: 700
 }
 
 .container-fluid {
-  min-height: 100vh;
-  padding: 0;
+	min-height: 100vh;
+	padding: 0;
 }
 
 .red {
@@ -81,22 +82,22 @@ return false;
 }
 
 .custom-button {
-  background-color: rgb(189, 15, 15);
-  border-radius: 25px;
-  color: white;
+	background-color: rgb(189, 15, 15);
+	border-radius: 25px;
+	color: white;
 }
 
 .custom-button:active {
-  background-color: rgb(145, 10, 10);
+	background-color: rgb(145, 10, 10);
 }
 
 .custom-button:hover {
-  background-color: rgb(145, 10, 10);
+	background-color: rgb(145, 10, 10);
 }
 
 .btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(160, 10, 10, 0.24);
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(160, 10, 10, 0.24);
 }
 
 </style>

@@ -1,21 +1,24 @@
 <template>
 	<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
-		<div class="question d-flex flex-column justify-content-center align-items-center">
+		<div v-if="!displayAwnser" class="question d-flex flex-column justify-content-center align-items-center">
 			<h5 class="lora-bold" v-if="!displayAwnser">{{ questionData.id }} / 10</h5>  
 			<h4 class="m-3 lora-bold" v-if="!displayAwnser" >{{ questionData.question }}</h4>
 			<div class="button-container">
 				<div v-for="response in questionData.responsesArray" v-bind:key="response">
-					<button type="button" class="custom-button btn m-2 lora-bold" v-bind:class="{ 'd-none' : displayAwnser }" v-on:click="displayAwnser = true" @click="awnser(response, questionData.response )" > {{ response }} </button>
+					<button type="button" class="custom-button btn m-2 lora-bold" v-bind:class="{ 'd-none' : displayAwnser }" @click="awnser(response, questionData.response )" > {{ response }} </button>
 				</div>
 			</div>
 		</div>
-		<div class="awnser anim d-flex flex-column justify-content-center align-items-center">
-			<h4 class="m-3 lora-bold green" v-if="goodAwnser">Bravo!</h4>
-			<h4 class="m-3 lora-bold red" v-if="badAwnser">Mauvaise réponse</h4>
-			<h3 class="lora-bold" v-if="displayAwnser">{{ questionData.response }}</h3>  
-			<h5 class="m-3" v-if="displayAwnser" >{{ questionData.description }}</h5>
-			<a v-bind:href="questionData.next" class="js-scrollTo"><button type="button" class="custom-button btn lora-bold" v-if="displayAwnser">Question suivante</button></a>
-		</div>
+		<transition name="slide-fade">
+			<div v-if="displayAwnser" class="awnser d-flex flex-column justify-content-center align-items-center">
+				<h4 class="mb-3 lora-bold green" v-if="goodAwnser">Bravo!</h4>
+				<h4 class="mb-3 lora-bold red" v-if="badAwnser">Mauvaise réponse</h4>
+				<h3 class="lora-bold">{{ questionData.response }}</h3>  
+				<h5 class="m-3" >{{ questionData.description }}</h5>
+				<a v-bind:href="questionData.next" v-smooth-scroll >
+					<button type="button" class="custom-button btn lora-bold" v-if="questionData.next">{{ nextQuestion }}</button></a>
+			</div>
+		</transition>
 	</div>
 </template>
 
@@ -24,21 +27,29 @@
 export default {
 	name: 'Question',
 	props: {
-		questionData: {},
+		questionData: Object,
 	},
 	data() {
 		return {
+			nextQuestion: "Question suivante",
 			displayAwnser: false,
 			goodAwnser: false,
 			badAwnser: false,
+		}
+	},
+	created: function () {
+		if (this.questionData.next === "#end") {
+			this.nextQuestion = "Découvrez votre score"
 		}
 	},
 	methods: {
 		awnser(userResponse, response ) {
 			if ( userResponse === response ) {
 				this.$emit('count')
+				this.displayAwnser = true
 				this.goodAwnser  = true
 			} else {
+				this.displayAwnser = true
 				this.badAwnser = true
 			}
 		}
@@ -63,24 +74,18 @@ export default {
 	width: 100%;
 	max-width: 600px;
 	margin: 20px;
-	opacity: 1;
 }
 
-.anim {
-  -moz-animation-name: main; /* Safari 4.0 - 8.0 */
-  -moz-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-  animation-name: main;
-  animation-duration: 2s;
+.slide-fade-enter-active {
+  transition: all .3s ease;
 }
-
-/* Standard syntax */
-@keyframes main {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100px);
+  opacity: 0;
 }
 
 .button-container {
