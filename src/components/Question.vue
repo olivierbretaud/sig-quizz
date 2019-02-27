@@ -19,6 +19,9 @@
 					<button type="button" class="custom-button btn lora-bold" v-if="questionData.next">{{ nextQuestion }}</button></a>
 			</div>
 		</transition>
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" v-bind:style="{width: progress + '%'} "  aria-valuemin="0" aria-valuemax="10"></div>
+		</div>
 	</div>
 </template>
 
@@ -28,6 +31,7 @@ export default {
 	name: 'Question',
 	props: {
 		questionData: Object,
+		progress: Number
 	},
 	data() {
 		return {
@@ -44,6 +48,7 @@ export default {
 	},
 	methods: {
 		awnser(userResponse, response ) {
+			this.$emit('progress')
 			if ( userResponse === response ) {
 				this.$emit('count')
 				this.displayAwnser = true
@@ -59,10 +64,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container-fluid {
-  min-height: 100vh;
-  padding: 0;
-}
 
 .question {
 	width: 100%;

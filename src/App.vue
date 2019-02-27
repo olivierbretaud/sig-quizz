@@ -2,7 +2,12 @@
 	<div id="app" class="bg-img">
 	<Start/>
 	<div v-for="data in quizz" v-bind:key="data.id">
-		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()"/>
+		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()" @progress="progress()"/>
+		<div class="progress-container">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" v-bind:style="{width: progressSum + '%'} "  aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
 	</div>
 	<End id="end" v-bind:totalCount="userResponse"/>
 	</div>
@@ -26,11 +31,16 @@ export default {
 	data() {
 		return {
 			quizz: data.quizz,
-			userResponse: 0
+			userResponse: 0,
+			progressSum: 0
 		};
 	},
 
 	methods: {
+		progress() {
+			this.progressSum = this.progressSum +10
+			return this.progressSum
+		},
 		counter() {
 			this.userResponse = this.userResponse + 10
 			return this.userResponse
@@ -79,6 +89,14 @@ export default {
 
 .green {
 	color: rgb(45, 121, 15);
+}
+
+.progress-container {
+	position: fixed;
+	bottom: -4px;
+	height: 20px;
+	width: 102%;
+	left: -2px;
 }
 
 .custom-button {
