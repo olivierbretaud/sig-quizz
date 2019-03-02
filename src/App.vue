@@ -80,7 +80,6 @@ export default {
 
 .container-fluid {
 	min-height: 100vh;
-	padding: 0;
 }
 
 .red {

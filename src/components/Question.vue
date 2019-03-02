@@ -20,7 +20,7 @@
 			</div>
 		</transition>
 		<div class="progress">
-			<div class="progress-bar" role="progressbar" v-bind:style="{width: progress + '%'} "  aria-valuemin="0" aria-valuemax="10"></div>
+			<div class="progress-bar bg-progress" role="progressbar" v-bind:style="{width: progress + '%'} "  aria-valuemin="0" aria-valuemax="10"></div>
 		</div>
 	</div>
 </template>
@@ -69,12 +69,19 @@ export default {
 	width: 100%;
 	max-width: 600px;
 	margin: 20px;
+	padding-bottom: 30px;
 }
 
 .awnser {
 	width: 100%;
 	max-width: 600px;
 	margin: 20px;
+	padding-bottom: 30px;
+}
+
+.bg-progress {
+	height: 100px;
+	background-color: #05A0DF !important;
 }
 
 .slide-fade-enter-active {

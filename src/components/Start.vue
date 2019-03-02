@@ -32,7 +32,7 @@ export default {
 
 .logo-sit {
 	position: absolute;
-	width: 300px;
+	width: 200px;
 	height: 200px;
 	object-fit: cover;
 	bottom: 30px;
