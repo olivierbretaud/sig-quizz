@@ -27,15 +27,14 @@ export default {
 
 .intro {
 	max-width: 400px;
+	margin-top: 30px;
 	margin: 10px;
 }
 
 .logo-sit {
-	position: absolute;
 	width: 200px;
 	height: 200px;
 	object-fit: cover;
-	bottom: 30px;
 }
 
 </style>

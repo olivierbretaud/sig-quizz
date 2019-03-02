@@ -69,6 +69,12 @@ export default {
 	background-size: cover;
 }
 
+@media screen and (max-width: 450px) {
+	.bg-img {
+		background-image: url("./assets/bg-picture-grey-phone.png");
+	}
+}
+
 .lora {
 	font-family: 'Lora', serif;
 }
@@ -80,6 +86,7 @@ export default {
 
 .container-fluid {
 	min-height: 100vh;
+	padding: 0px;
 }
 
 .red {
