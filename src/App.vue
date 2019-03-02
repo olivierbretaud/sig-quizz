@@ -66,12 +66,15 @@ export default {
 	background-position: center; /* Center the image */
 	background-attachment: fixed;
 	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: auto ;
+	background-size: cover;
 }
 
 @media screen and (max-width: 450px) {
 	.bg-img {
 		background-image: url("./assets/bg-picture-grey-phone.png");
+		background-position: center; /* Center the image */
+		background-attachment: scroll;
+		background-size: cover;
 	}
 }
 
