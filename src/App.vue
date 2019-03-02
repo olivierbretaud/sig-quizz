@@ -66,7 +66,7 @@ export default {
 	background-position: center; /* Center the image */
 	background-attachment: fixed;
 	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover;
+	background-size: auto ;
 }
 
 @media screen and (max-width: 450px) {
