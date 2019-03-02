@@ -1,5 +1,6 @@
 <template>
-	<div id="app" class="bg-img">
+	<div id="app" >
+	<div class="bg-img"></div>
 	<Start/>
 	<div v-for="data in quizz" v-bind:key="data.id">
 		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()" @progress="progress()"/>
@@ -63,18 +64,17 @@ export default {
 
 .bg-img {
 	background-image: url("./assets/bg-picture-grey.png");
-	background-position: center; /* Center the image */
-	background-attachment: fixed;
-	background-repeat: no-repeat; /* Do not repeat the image */
-	background-size: cover;
+    position: fixed;
+    background-size: cover;
+    width: 100%;
+	height: 100%;
+	z-index: -1;
 }
+
 
 @media screen and (max-width: 450px) {
 	.bg-img {
 		background-image: url("./assets/bg-picture-grey-phone.png");
-		background-position: center; /* Center the image */
-		background-attachment: scroll;
-		background-size: cover;
 	}
 }
 
