@@ -60,7 +60,7 @@
     {
       "id":"8",
       "next": "#9",
-      "question"  : "Quel est la date d’obtention du droit de vote des femmes en suisse",
+      "question"  : "Quel est la date d’obtention du droit de vote des femmes en suisse ?",
       "responsesArray": ["1893", "1924", "1934","1971"],
       "response": "1971",
       "description" : "La Suisse a accordé le droit de vote aux femmes au niveau fédéral en 1971, mais il faudra attendre 1990 pour que la Confédération force le canton d’Appenzell à accorder ce droit au niveau cantonal"
