@@ -46,7 +46,6 @@ export default {
 			return this.progressSum
 		},
 		counter() {
-			console.log(this.userResponse)
 			this.userResponse = this.userResponse + 10
 			return this.userResponse
 		}
