@@ -1,12 +1,11 @@
 <template>
 	<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
 		<div class="end d-flex flex-column align-items-center">
-			<h5 class="m-3 lora-bold red">Vous avez {{ totalCount }}% de bonnes réponses </h5>
 			<img src="../assets/logo-manif.png" class="logo-manif"/>
 			<h3 class="m-3 lora-bold" >{{ endSentence }}</h3>
 			<div>
-				<a href="#1" v-smooth-scroll="{ duration: 1000, offset: -50 }">
-					<button type="button" class="custom-button lora-bold btn m-2"> Revoir les réponses</button>
+				<a href="#result" v-smooth-scroll="{ duration: 1000, offset: -50 }">
+					<button type="button" class="custom-button lora-bold btn m-2">Découvrez votre score</button>
 				</a>
 			</div>
 		</div>
@@ -19,11 +18,13 @@ export default {
 	props: {
 		totalCount: Number
 	},
+
 	data() {
 		return {
 			endSentence: "Pour mettre fin aux inégalités en suisse, tou-te-s en grève le 14 juin!"
 		}
-	}
+	},
+
 }
 </script>
 

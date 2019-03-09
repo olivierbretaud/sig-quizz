@@ -10,7 +10,8 @@
 			</div>
 		</div>
 	</div>
-	<End id="end" v-bind:totalCount="userResponse"/>
+	<End id="end" />
+	<Result id="result" v-bind:totalCount="userResponse"/>
 	</div>
 </template>
 
@@ -18,6 +19,7 @@
 import Start from './components/Start.vue'
 import Question from './components/Question.vue'
 import End from './components/End.vue'
+import Result from './components/Result.vue'
 import data from './assets/quizz_data.json'
 
 export default {
@@ -26,7 +28,8 @@ export default {
 	components: {
 		Start,
 		Question,
-		End
+		End,
+		Result
 	},
 
 	data() {
@@ -43,6 +46,7 @@ export default {
 			return this.progressSum
 		},
 		counter() {
+			console.log(this.userResponse)
 			this.userResponse = this.userResponse + 10
 			return this.userResponse
 		}
