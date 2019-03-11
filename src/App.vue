@@ -42,11 +42,12 @@ export default {
 
 	methods: {
 		progress() {
+            console.log(this.userResponse)
 			this.progressSum = this.progressSum +10
 			return this.progressSum
 		},
 		counter() {
-			this.userResponse = this.userResponse + 10
+            this.userResponse = this.userResponse + 10
 			return this.userResponse
 		}
 	}

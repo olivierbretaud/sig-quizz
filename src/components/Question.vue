@@ -5,7 +5,7 @@
 			<h4 class="m-3 lora-bold" v-if="!displayAwnser" >{{ questionData.question }}</h4>
 			<div class="button-container">
 				<div v-for="response in questionData.responsesArray" v-bind:key="response">
-					<button type="button" class="custom-button btn m-2 lora-bold" v-bind:class="{ 'd-none' : displayAwnser }" @click="awnser(response, questionData.response )" > {{ response }} </button>
+					<button type="button" class="custom-button btn m-2 lora-bold" v-bind:class="{ 'd-none' : displayAwnser }" @click="awnser(response, questionData.responseTrue )" > {{ response }} </button>
 				</div>
 			</div>
 		</div>
