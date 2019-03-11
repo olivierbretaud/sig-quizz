@@ -5,7 +5,7 @@
       "next": "#2",
       "question" : "Quel est l’écart salarial entre hommes et femmes en Suisse ?",
       "responsesArray": ["0%", "5%","19%", "25%"],
-      "response": "19%",
+      "response": "L’écart salarial entre femmes et hommes est de 19%",
       "description" : "Selon les dernières statistiques, les femmes gagnent en moyenne 19,6% de moins que les hommes en Suisse."
     },
     {
@@ -13,7 +13,7 @@
       "next": "#3",
       "question"  : "Quelle est la part inexpliquée de cet écart salarial entre femmes et hommes ?",
       "responsesArray": ["12,2%", "33%","42,9%", "66,5%"],
-      "response": "42,9%",
+      "response": "La part inexpliquée de cet écart salarial est de 42.9%",
       "description" : "Près de 43% de l’écart salarial reste injustifié. A formation, expérience et fonction égales, la discrimination salariale à l’égard les femmes représente 657 francs par mois en moyenne. Selon la branche économique cette part varie considérablement : 80,3% dans l’hôtellerie-restauration, 65,4% dans la vente, 34,8% dans les services publics, 30,6% dans les banques et les assurances."
     },
     {
@@ -21,7 +21,7 @@
       "next": "#4",
       "question"  : "Si l’écart salarial cumulé pendant toute la vie professionnelle était compensé par un départ anticipé des femmes à la retraite, à quel âge ces dernières pourraient-elles demander la retraite ?",
       "responsesArray": ["50 ans", "55 ans","60 ans", "64 ans"],
-      "response": "55 ans",
+      "response": "Les femmes pourraient partir à la retraite à 55 ans.",
       "description" : "55 ans, puisque l’écart salarial est de 19%, nous avons calculé que le travail d’une femme à partir de 55 ans est en fait du travail bénévole."
     },
     {
@@ -30,7 +30,7 @@
       "next": "#5",
       "question"  : "Combien d’entreprises en suisses devront se soumettre à l’analyse de l’égalité salariale selon la dernière révision de la loi fédérale sur l’égalité ?",
       "responsesArray": ["Toutes", "50%", "celles qui emploient des femmes", "1%"],
-      "response": "1%",
+      "response": "1% des entreprises sont concernées par la nouvelle révision de la loi sur l’égalité.",
       "description" : "Seules les entreprises comptant plus de 100 employé-e-s devront procéder à une analyse de l’égalité salariale tous les 4 ans. Cela représente 1% des entreprises. Cette révision s’éteindra après 12 ans."
     },
     {
@@ -38,7 +38,7 @@
       "next": "#6",
       "question" : "Existe-t-il une obligation de faire contrôler le respect de l’égalité salariale au sein des entreprises ? Et des sanctions ?",
       "responsesArray": ["oui", "non"],
-      "response": "non",
+      "response": "Non, il n’existe ni contrôles obligatoires, ni sanctions concernant les discriminations salariales. ",
       "description" : "Non. Il incombe aux entreprises de se mettre « spontanément » en conformité. L’Etat met à disposition gratuitement un outil d’analyse de l’égalité mais aucun employeur n’est obligé de s’y référer. Si l’analyse révèle des inégalités salariales, aucune sanction n’est prévue. Seules les entreprises qui soumissionnent pour les marchés publics peuvent être contrôlées et écartées si l’analyse démontre une discrimination salariale."
     },
     {
@@ -46,7 +46,7 @@
       "next": "#7",
       "question" :"Quel est la durée du congé maternité en suisse",
       "responsesArray": ["14 semaines", "18 semaines", "24 semaines","20 semaines"],
-      "response": "14 semaines",
+      "response": "En suisse, la durée du congé maternité est de 14 semaines.",
       "description" : "la Suisse est l’un des pays qui accorde le congé maternité le plus court au monde"
     },
     {
@@ -54,7 +54,7 @@
       "next": "#8",
       "question"  : "Combien manque-t-il de places en crèche à Genève ?",
       "responsesArray": ["125", "800", "2000","4000"],
-      "response": "4000",
+      "response": "Il manque 4000 places de crèche à Genève.",
       "description" : "Il manque 4000 places en crèche pour répondre à la demande des parents. De nombreuses femmes sont obligées de ce fait d’interrompre leur activité professionnelle ou de baisser leur taux d’activité, ce qui a des conséquences sur leur perspective de carrière, leur revenu et le montant de leur retraite. Rare sont les hommes qui font de même"
     },
     {
@@ -62,7 +62,7 @@
       "next": "#9",
       "question"  : "Quel est la date d’obtention du droit de vote des femmes en suisse ?",
       "responsesArray": ["1893", "1924", "1934","1971"],
-      "response": "1971",
+      "response": "En suisse, les femmes ont obtenu le droit de vote en 1971.",
       "description" : "La Suisse a accordé le droit de vote aux femmes au niveau fédéral en 1971, mais il faudra attendre 1990 pour que la Confédération force le canton d’Appenzell à accorder ce droit au niveau cantonal"
     },
     {
@@ -70,16 +70,16 @@
       "next": "#10",
       "question"  : "Depuis quand une suissesse mariée à un non suisse peut-elle transmettre la nationalité à ses enfants ?",
       "responsesArray": ["1848", "1971", "1985","1990"],
-      "response": "1985",
-      "description" : "Une suissesse mariée à un non suisse ne peut transmettre sa nationalité, et les droits qui vont avec, que depuis 1985"
+      "response": "Depuis 1985, une suissesse mariée à un non suisse peut transmettre sa nationalité, et les droits qui vont avec, à ses enfants",
+      "description" : "Jusque-là, les mères ne pouvaient pas du tout transmettre la nationalité suisse à leurs enfants, qui recevaient automatiquement la nationalité de leur père, et le droit du sang ne s’appliquait qu’aux pères."
     },
     {
       "id":"10",
       "next": "#end",
       "question"  : "Depuis quand une suissesse mariée peut- elle ouvrir seule un compte en banque ?",
       "responsesArray": ["1848", "1968", "1988","2008"],
-      "response": "1988",
-      "description" : ""
+      "response": "Depuis 1988, une suissesse mariée peut ouvrir un compte en banque sans l’accord de son mari.",
+      "description" : "Avant cela, selon la loi suisse, « le mari administre les biens matrimoniaux ». Une femme mariée ne pouvais donc ni ouvrir de compte en banque, ni souscrire de crédit, ni même exercer une activité sans l’accord de son mari. "
     }
   ]
 }

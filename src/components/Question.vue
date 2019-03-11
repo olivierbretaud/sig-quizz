@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+	<div class="container-fluid d-flex flex-column justify-content-center align-items-center top">
 		<div v-if="!displayAwnser" class="question d-flex flex-column justify-content-center align-items-center">
 			<h5 class="lora-bold" v-if="!displayAwnser">{{ questionData.id }} / 10</h5>  
 			<h4 class="m-3 lora-bold" v-if="!displayAwnser" >{{ questionData.question }}</h4>
@@ -13,7 +13,7 @@
 			<div v-if="displayAwnser" class="awnser d-flex flex-column justify-content-center align-items-center">
 				<h4 class="mb-3 lora-bold green" v-if="goodAwnser">Bravo!</h4>
 				<h4 class="mb-3 lora-bold red" v-if="badAwnser">Mauvaise réponse</h4>
-				<h3 class="lora-bold">{{ questionData.response }}</h3>  
+				<h4 class="lora-bold">{{ questionData.response }}</h4>  
 				<h5 class="m-3" >{{ questionData.description }}</h5>
 				<a v-bind:href="questionData.next" v-smooth-scroll >
 					<button type="button" class="custom-button btn lora-bold" v-if="questionData.next">{{ nextQuestion }}</button></a>
@@ -68,14 +68,14 @@ export default {
 .question {
 	width: 100%;
 	max-width: 600px;
-	margin: 20px;
+    padding: 20px;
 	padding-bottom: 30px;
 }
 
 .awnser {
 	width: 100%;
 	max-width: 600px;
-	margin: 20px;
+    padding: 20px;
 	padding-bottom: 30px;
 }
 

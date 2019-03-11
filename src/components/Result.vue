@@ -2,8 +2,8 @@
 	<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
 		<div class="end d-flex flex-column align-items-center">
 			<h3 class="m-3 lora-bold red">Vous avez {{ totalCount }}% de bonnes réponses </h3>
-			<h3 class="m-3" >{{ getResultSentence }}</h3>
-			<div>
+			<h4 class="m-3" >{{ getResultSentence }}</h4>
+			<div >
 				<a href="#1" v-smooth-scroll="{ duration: 1000, offset: -50 }">
 					<button type="button" class="custom-button lora-bold btn m-2"> Revoir les réponses</button>
 				</a>

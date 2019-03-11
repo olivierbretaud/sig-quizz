@@ -1,17 +1,17 @@
 <template>
 	<div id="app" >
-	<div class="bg-img"></div>
-	<Start/>
-	<div v-for="data in quizz" v-bind:key="data.id">
-		<Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()" @progress="progress()"/>
-		<div class="progress-container">
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" v-bind:style="{width: progressSum + '%'} "  aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-	</div>
-	<End id="end" />
-	<Result id="result" v-bind:totalCount="userResponse"/>
+        <div class="bg-img"></div>
+        <Start/>
+        <div v-for="data in quizz" v-bind:key="data.id">
+            <Question v-bind:id="data.id" v-bind:questionData="data" @count="counter()" @progress="progress()"/>
+            <div class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" v-bind:style="{width: progressSum + '%'} "  aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <End id="end" />
+        <Result id="result" v-bind:totalCount="userResponse"/>
 	</div>
 </template>
 
@@ -46,7 +46,6 @@ export default {
 			return this.progressSum
 		},
 		counter() {
-			console.log(this.userResponse)
 			this.userResponse = this.userResponse + 10
 			return this.userResponse
 		}
@@ -57,6 +56,7 @@ export default {
 </script>
 
 <style>
+
 #app {
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
